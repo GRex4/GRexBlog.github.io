@@ -1,3 +1,3 @@
-# GRexBlog.github.io
+theme: Minimal
 Temp content
 [First Post](Blogpost.md)
