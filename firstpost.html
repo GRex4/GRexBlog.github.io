@@ -22,9 +22,12 @@
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="index.html">GRex4 Blog</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-dark text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="bars">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
@@ -58,11 +61,11 @@
                     <div class="col mt-4">
                         <div class="card shadow-sm">
                             <div class="card-body ">
-                              <p class="card-text fw-light">If you're interested in the field of artificial intelligence (AI), you've probably heard a lot about neural networks. These powerful algorithms are at the heart of many AI systems, and they are capable of learning and making predictions based on large amounts of data.
+                              <p class="card-text fw-light">If you are interested in the field of artificial intelligence (AI), you have likely heard a lot about neural networks. These powerful algorithms are central to many AI systems and are able to learn and make predictions based on large amounts of data.
 
-                                But if you're new to the world of AI, you might be wondering how to actually write a neural network. It can seem like a daunting task, especially if you don't have a background in computer science or machine learning.
+                                However, if you are new to the world of AI, you may be wondering how to actually write a neural network. This task can seem intimidating, particularly if you do not have a background in computer science or machine learning.
                                 
-                                Don't worry – writing your first neural network is easier than you might think! In this blog post, we'll go over the basics of neural networks and provide a step-by-step guide to writing your first one.</p>
+                                Don't be concerned – writing your first neural network is easier than you may think! In this blog post, we will cover the basics of neural networks and provide a step-by-step guide for writing your first one.</p>
                             </div>
                           </div>
                     </div>
@@ -72,7 +75,7 @@
                     <div class="col mt-4">
                         <div class="card shadow-sm">
                             <div class="card-body ">
-                              <p class="card-text fw-light">First, let's start by defining what a neural network is. A neural network is a type of machine learning algorithm that is made up of interconnected "neurons". These neurons are organized into layers, and they are able to learn and make predictions based on the connections between them.</p>
+                              <p class="card-text fw-light">First, let's define what a neural network is. A neural network is a type of machine learning algorithm that consists of interconnected "neurons." These neurons are organized into layers and are able to learn and make predictions based on the connections between them.</p>
                             </div>
                           </div>
                     </div>
@@ -84,7 +87,7 @@
                     <div class="col mt-4">
                         <div class="card shadow-sm">
                             <div class="card-body text-center">
-                              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Neural_network.svg/600px-Neural_network.svg.png" height="300">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Neural_network.svg/600px-Neural_network.svg.png" class="img-fluid" alt="Responsive image">
                             </div>
                           </div>
                     </div>
@@ -104,7 +107,13 @@
                     <div class="col mt-4">
                         <div class="card shadow-sm">
                             <div class="card-body ">
-                              <p class="card-text fw-light">"Similarly, a single neuron in a deep learning model uses an activation function to process input data and pass it on to other neurons. By default, this activation function is a linear equation, represented by the formula "y = mx + c"."</p>
+                              <p class="card-text fw-light">In deep learning, a neuron is a unit that processes input data and generates an output. It is a fundamental building block of neural networks, which are algorithms that are designed to mimic the way the human brain processes information.
+
+                                Each neuron receives input data and combines it using a set of weights and biases. The resulting value is passed through an activation function, which determines the output of the neuron. The activation function is a mathematical function that takes in the input data and produces an output based on certain criteria. For example, the commonly used sigmoid activation function generates an output between 0 and 1, while the ReLU (Rectified Linear Unit) activation function generates an output that is either 0 or the input value, depending on whether the input is negative or positive.
+                                
+                                The output of the neuron is then passed on to other neurons in the network, where it can be further processed and used to make predictions or decisions.
+                                
+                                Neurons are organized into layers in a neural network, and the connections between them are used to transmit data and learn patterns in the input data. The structure and interconnections of the neurons in a neural network determine its behavior and capabilities.</p>
                             </div>
                           </div>
                     </div>
@@ -117,7 +126,7 @@
                     <div class="col mt-4">
                         <div class="card shadow-sm">
                             <div class="card-body text-center">
-                                <img src="https://miro.medium.com/max/700/1*PEVu_D47bKVvWfGEOj8Y7A.png" height="300">
+                                <img src="https://miro.medium.com/max/700/1*PEVu_D47bKVvWfGEOj8Y7A.png" class="img-fluid" alt="Responsive image">
                             </div>
                             </div>
                     </div>
@@ -172,6 +181,402 @@ import tensorflow as tf
                 </div>
 
 
+                <div class="row justify-content-center">
+                    <div class="col mt-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body ">
+                                <h6>Load the MNIST dataset</h6>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+
+                                <!-- code block-->
+                                <div class="row justify-content-center">
+                                    <div class="col mt-4">
+                                        <div class="card shadow-sm bg-dark">
+                        
+                                            <div class="card-body">
+                    
+                                                <pre class="bg-dark">
+                                                    <code class="language-python">
+mnist = tf.keras.datasets.mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row justify-content-center">
+                                    <div class="col mt-4">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body ">
+                                              <p class="card-text fw-light">Once you have your dataset, you'll need to preprocess it to extract the relevant information and prepare it for training. This might involve cleaning and normalizing the data, splitting it into individual words or tokens, and performing other types of preprocessing to extract the relevant features.
+                                                We are converting the sample data from integers to floating-point numbers</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- code block-->
+                                <div class="row justify-content-center">
+                                    <div class="col mt-4">
+                                        <div class="card shadow-sm bg-dark">
+                        
+                                            <div class="card-body">
+                    
+                                                <pre class="bg-dark">
+                                                    <code class="language-python">
+x_train, x_test = x_train / 255.0, x_test / 255.0
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col mt-4">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body ">
+                                              <h4 class="card-text fw-light">Build a machine learning model</h4>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col mt-4">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body ">
+                                              <p class="card-text fw-light">Next, you'll need to define the structure of your neural network. This will involve deciding how many layers it will have, how many neurons each layer will have, and how the neurons will be connected to each other.</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row justify-content-center">
+                                    <div class="col mt-4">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body ">
+                                                <h6>"In this case, we are using the Sequential model provided by Keras in TensorFlow. You can read more about it at <a href="https://www.tensorflow.org/overview">https://www.tensorflow.org/overview "</a></h6>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- code block-->
+                                <div class="row justify-content-center">
+                                    <div class="col mt-4">
+                                        <div class="card shadow-sm bg-dark">
+                        
+                                            <div class="card-body">
+                    
+                                                <pre class="bg-dark">
+                                                    <code class="language-python">
+    model = tf.keras.models.Sequential([
+    tf.keras.layers.Flatten(input_shape=(28, 28)),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(10)
+    ])
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+In order to write a neural network, you will need to consider the following factors:
+
+    Input layer: The input shape, or the number of features, is required for the input layer.
+    Hidden layers: You can add as many hidden layers as you like, but input variables are not necessary.
+    Output layer: The number of nodes in the output layer should match the output. In classification, this means the number of classes, and in regression, it should be 1.
+    Activation function: This function plays a crucial role in determining the output of the network.
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <h4 class="card-text fw-light">Structure for input layer</h4>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+model.add(keras.layers.Dense(128,               #Number of nodes
+input_shape=(4,), 		#Number of input variables
+name='Hidden-Layer-1',	#Logical name (optional)
+activation='relu'))   	#activation function (optional)
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <h4 class="card-text fw-light">Structure for hidden layers</h4>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+model.add(keras.layers.Dense(128,               #Number of nodes
+name='Hidden-Layer-2',	#Logical name (optional)
+activation='relu'))		#activation function
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <h4 class="card-text fw-light">Structure for output layers</h4>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+model.add(keras.layers.Dense(NB_CLASSES,		        #Number of nodes
+name='Output-Layer',		#Logical name (optional)
+activation='softmax'))		#activation function
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <p class="card-text fw-light">Once you have your neural network structure defined, you can use a machine learning library, such as TensorFlow or PyTorch, to train your neural network on your dataset. This will involve iteratively adjusting the weights of the connections between the neurons in order to minimize the error between the predictions made by the neural network and the actual labels in your dataset.
+
+                                          </p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <p class="card-text fw-light">Before you start training, configure and compile the model using Keras Model.compile. Set the optimizer class to adam, set the loss to the loss_fn function you defined earlier, and specify a metric to be evaluated for the model by setting the metrics parameter to accuracy.</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <p class="card-text fw-light">Define a loss function for training using losses.SparseCategoricalCrossentropy, which takes a vector of logits and a True index and returns a scalar loss for each example.</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+model.compile(optimizer='adam',
+loss=loss_fn,
+metrics=['accuracy'])
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <h4 class="card-text fw-light">Use the Model.fit method to Train The model</h4>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+model.fit(x_train, y_train, epochs=5)
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+                            <!-- code block-->
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm bg-dark">
+                    
+                                        <div class="card-body">
+                
+                                            <pre class="bg-dark">
+                                                <code class="language-python">
+        Epoch 1/5
+        1875/1875 [==============================] - 16s 6ms/step - loss: 0.2927 - accuracy: 0.9156
+        Epoch 2/5
+        1875/1875 [==============================] - 12s 6ms/step - loss: 0.1431 - accuracy: 0.9575
+        Epoch 3/5
+        1875/1875 [==============================] - 10s 6ms/step - loss: 0.1075 - accuracy: 0.9674
+        Epoch 4/5
+        1875/1875 [==============================] - 10s 6ms/step - loss: 0.0879 - accuracy: 0.9729
+        Epoch 5/5
+        1875/1875 [==============================] - 11s 6ms/step - loss: 0.0749 - accuracy: 0.9762
+                                                </code>
+                                            </pre>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <h4 class="card-text fw-light">Our model was able to correctly classify objects with an accuracy of 97%, as indicated by the obtained accuracy of 0.9762.</h4>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row justify-content-center">
+                                <div class="col mt-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body ">
+                                          <p class="card-text fw-light">Once your neural network is trained, you can use it to make predictions on new data. This will involve providing your neural network with a set of input data and allowing it to generate output based on the patterns it has learned from your training dataset.
+
+                                            Overall, writing your first neural network is a challenging but rewarding process that can give you a deep understanding of the capabilities and limitations of these powerful algorithms. With the right tools and resources, anyone can write their own neural network and start exploring the fascinating world of AI.</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+
+
+
+
+
 
 
                     
@@ -195,7 +600,7 @@ import tensorflow as tf
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/GRex4"><i class="fab fa-fw fa-github"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-youtube"></i></a>
                     </div>
                     <!-- Footer About Text-->

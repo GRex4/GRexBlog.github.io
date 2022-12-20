@@ -467,6 +467,14 @@ legend + * {
   -webkit-appearance: button;
 }
 
+
+.bars div {
+  width: 25px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  margin: 4px 0;
+}
+
 output {
   display: inline-block;
 }
