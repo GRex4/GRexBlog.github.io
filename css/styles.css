@@ -7900,6 +7900,11 @@ textarea.form-control-lg {
   background-image: var(--bs-gradient) !important;
 }
 
+.bg-mygrad{
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+
 .user-select-all {
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
